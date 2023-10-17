@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreHardware.DataBases;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,7 +14,7 @@ namespace StoreHardware
     /// </summary>
     public partial class App : Application
     {
-       // public static St
-
+        public static StoreHardwareEntities1 db
+            = new StoreHardwareEntities1();
     }
 }
