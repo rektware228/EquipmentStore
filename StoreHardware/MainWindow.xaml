@@ -17,7 +17,10 @@
         </Grid.ColumnDefinitions>
         <Rectangle Fill="#FF9DA4D5"></Rectangle>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" >Hard ware Store</TextBlock>
-        <Button x:Name="ExitBTN" Grid.Column="1" Height="12" VerticalAlignment="Top"> Выход</Button>
-        <Button x:Name="RefreshBTN" Grid.Column="1" Height="12" VerticalAlignment="Bottom">Обновить</Button>
+        <Button x:Name="ExitBTN" Grid.Column="1" Height="18" VerticalAlignment="Top"> Выход</Button>
+        <Button x:Name="RefreshBTN" Grid.Column="1" Height="18" VerticalAlignment="Bottom">Обновить</Button>
+        <WrapPanel Grid.Row="1" Grid.Column="1">
+            
+        </WrapPanel>
     </Grid>
 </Window>
