@@ -13,5 +13,7 @@ namespace StoreHardware
     /// </summary>
     public partial class App : Application
     {
+       // public static St
+
     }
 }
