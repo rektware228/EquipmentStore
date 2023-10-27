@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreHardware.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using StoreHardware.DataBases;
+using StoreHardware.Components;
+using static StoreHardware.Components.Navigation;
 
 namespace StoreHardware
 {
@@ -23,6 +27,21 @@ namespace StoreHardware
         public MainWindow()
         {
             InitializeComponent();
+            MyFrame.Navigate(new ServiceListPage());
+            Navigation.mainWindow = this;
+            Navigation.NextPage(new PageComponent("Авторизация", new AuthorizatePage()));
+        }
+
+        private void ExitBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.ClearHistory();
+            Navigation.NextPage(new PageComponent("Авторизация", new AuthorizatePage()));
+        }
+
+        private void BackBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.BackPage();
         }
     }
 }
+

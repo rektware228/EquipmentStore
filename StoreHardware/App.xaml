@@ -5,14 +5,14 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Verdana"></Setter>
+            <Setter Property="FontFamily" Value="TimesNewRoman"></Setter>
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
             <Setter Property="FontSize" Value="12"></Setter>
         </Style>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="4"></Setter>
-            <Setter Property="Background" Value="#FF46445E"></Setter>
+            <Setter Property="Background" Value="#FFF33939"></Setter>
            
          </Style>
     </Application.Resources>

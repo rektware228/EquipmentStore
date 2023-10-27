@@ -64,10 +64,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Components\ServiceUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,9 +72,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Components\ServiceUserControl.xaml.cs">
-      <DependentUpon>ServiceUserControl.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Components\Navigation.cs" />
     <Compile Include="DataBases\Feedback.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -97,13 +91,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DataBases\PartialClass\Product.cs" />
     <Compile Include="DataBases\Product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBases\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBases\sp_helpdiagrams_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBases\sysdiagrams.cs">
@@ -113,8 +102,29 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AuthorizatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ServiceListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ServiceUserControll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AuthorizatePage.xaml.cs">
+      <DependentUpon>AuthorizatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ServiceListPage.xaml.cs">
+      <DependentUpon>ServiceListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ServiceUserControll.xaml.cs">
+      <DependentUpon>ServiceUserControll.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,11 +158,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\stat.png" />
+    <Resource Include="Resources\like.png" />
+    <Resource Include="Resources\buy.png" />
+    <Resource Include="Resources\star.png" />
+    <Resource Include="Resources\pngwing.png" />
+    <Resource Include="Resources\image2.jpg" />
+    <Resource Include="Resources\imagef.jpg" />
+    <Resource Include="Resources\imageone.jpg" />
+    <Resource Include="Resources\imagethree.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBases\Model1.Context.tt">

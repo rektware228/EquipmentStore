@@ -14,7 +14,8 @@ namespace StoreHardware
     /// </summary>
     public partial class App : Application
     {
-        public static StoreHardwareEntities1 db
-            = new StoreHardwareEntities1();
+        public static StoreHardwareEntities2 db
+            = new StoreHardwareEntities2();
+        public static bool IsAdmin = false;
     }
 }

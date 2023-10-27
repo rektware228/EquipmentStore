@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StoreHardware"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="900">
+        Title="MainWindow" Height="450" Width="900" 
+        x:Name="MyWindow">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -16,11 +17,12 @@
             <ColumnDefinition ></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Rectangle Fill="#FF9DA4D5"></Rectangle>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" >Hard ware Store</TextBlock>
-        <Button x:Name="ExitBTN" Grid.Column="1" Height="18" VerticalAlignment="Top"> Выход</Button>
-        <Button x:Name="RefreshBTN" Grid.Column="1" Height="18" VerticalAlignment="Bottom">Обновить</Button>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="TitleTb" >Hard ware Store</TextBlock>
+        <Button x:Name="ExitBTN" Grid.Column="1" Height="18" VerticalAlignment="Top" Click="ExitBTN_Click"> Выход</Button>
+        <Button x:Name="BackBTN" Grid.Column="1" Height="18" VerticalAlignment="Bottom" Click="BackBTN_Click">Назад</Button>
         <WrapPanel Grid.Row="1" Grid.Column="1">
             
         </WrapPanel>
+        <Frame x:Name="MyFrame" Grid.Column="0" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>
